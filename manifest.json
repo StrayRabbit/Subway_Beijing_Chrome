@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "北京地铁预约",
+    "version": "1.0",
+    "description": "北京地铁预约",
+    "background": {
+        "scripts": [
+            "js/jquery-3.1.1.min.js",
+            "js/background.js",
+            "js/main.js"
+        ]
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://webui.mybti.cn/*"
+            ],
+            "js": [
+                "js/jquery-3.1.1.min.js",
+                "js/main.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "images/icon128.png",
+        "default_title": "北京地铁预约"
+    }
+}
